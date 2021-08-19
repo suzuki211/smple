@@ -1,9 +1,9 @@
 <h2>タイトル</h2>
 <p><%= @list.title %></p>
-<h2>本文</h2>
+<h2>感想「</h2>
 <p><%= @list.body %></p>
-<span class="sentiment-score">本文の感情分析スコア<%= @list.score %></span>
-<h2>画像</h2>
+<span class="sentiment-score">感情分析スコア<%= @list.score %></span>
+<h2>投稿画像</h2>
 <%= attachment_image_tag @list, :image, :fill, 300, 300, format: 'jpeg' %>
 <div class="tag-box">
 <% @list.tags.each do |tag| %>
