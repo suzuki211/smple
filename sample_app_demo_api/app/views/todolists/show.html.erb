@@ -11,5 +11,5 @@
   <span class="label"><%= tag.name %></span>
 <% end %>
 </div>
-<%= link_to "削除", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+<%= link_to "削除", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "本当に削除してよろしいですか？" %>
 <%= link_to "編集", edit_todolist_path(@list.id) %>
