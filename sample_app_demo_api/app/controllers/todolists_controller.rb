@@ -8,7 +8,7 @@ class TodolistsController < ApplicationController
     list.score = Language.get_data(list_params[:body])  #この行を追加
     list.save
     tags = Vision.get_image_data(list.image)    
-    tags.each do |tag|
+    tags&.each do |tag|
       list.tags.create(name: tag)
     end
     redirect_to todolist_path(list.id)
